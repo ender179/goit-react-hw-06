@@ -3,10 +3,10 @@ import contactsReducer from './contactsSlice';
 import filterReducer from './filtersSlice';  
 
 const store = configureStore({  
-    reducer: {  
-        contacts: contactsReducer, // используя `contacts` как ключ  
-        filter: filterReducer,       // используя `filter` как ключ  
-    },  
+  reducer: {  
+    contacts: contactsReducer, // используем `contacts` как ключ  
+    filter: filterReducer, // используем `filter` как ключ  
+  },  
 });  
 
 export default store;

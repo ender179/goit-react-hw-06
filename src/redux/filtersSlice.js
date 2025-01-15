@@ -5,10 +5,13 @@ const filtersSlice = createSlice({
     initialState: '',  
     reducers: {  
         setFilter(state, action) {  
-            return action.payload;  
+            return action.payload; // Устанавливаем состояние фильтра  
         },  
     },  
 });  
 
-export const { setFilter } = filtersSlice.actions; // экспортируем действие  
-export default filtersSlice.reducer; // экспортируем редюсер
+// Экспортируем действие  
+export const { setFilter } = filtersSlice.actions;  
+
+// Экспортируем редюсер  
+export default filtersSlice.reducer;

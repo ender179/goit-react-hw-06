@@ -1,13 +1,12 @@
-import styles from './ContactForm.module.css';
-import React from 'react';
-import { nanoid } from 'nanoid';
-import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contactSlice';
+import styles from "./ContactForm.module.css";
+import { nanoid } from "nanoid";
+import { useDispatch } from "react-redux";
+import { addContact } from "../../redux/contactsSlice";
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const newObj = {

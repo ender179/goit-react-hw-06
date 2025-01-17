@@ -9,7 +9,7 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(  
   <StrictMode>  
-    <Provider store={store}> {/* Исправлено */}  
+    <Provider store={store}> 
       <App />  
     </Provider>  
   </StrictMode>  

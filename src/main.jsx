@@ -1,9 +1,9 @@
 import React, { StrictMode } from 'react';  
 import { createRoot } from 'react-dom/client';  
-import App from './components/App'; // Убедитесь, что путь к App.jsx правильный  
+import App from './components/App/App';   
 import { Provider } from 'react-redux';  
 import { PersistGate } from 'redux-persist/integration/react';  
-import store, { persistor } from './redux/store'; // Исправлено: импорты store и persistor  
+import store, { persistor } from './redux/store'; 
 
 const root = createRoot(document.getElementById("root"));  
 

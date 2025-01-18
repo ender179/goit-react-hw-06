@@ -2,13 +2,12 @@ import React from "react";
 import { Provider } from "react-redux";  
 import { PersistGate } from "redux-persist/integration/react";  
 import { persistStore } from "redux-persist";  
-import { store } from './redux/store'; // Імпорт вашого Redux store  
+import { store } from './redux/store'; 
 import ContactList from "./components/ContactList/ContactList";  
 import SearchBox from "./components/SearchBox/SearchBox";  
 import ContactForm from "./components/ContactForm/ContactForm";  
-import Loading from './components/Loading'; // Компонент для відображення під час завантаження  
 
-const persistor = persistStore(store); // Створення persistor  
+const persistor = persistStore(store);  
 
 function App() {  
     return (  

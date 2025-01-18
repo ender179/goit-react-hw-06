@@ -4,8 +4,7 @@ import "./index.css";
 import App from "./App.jsx";  
 import { Provider } from "react-redux";  
 import { PersistGate } from "redux-persist/integration/react";  
-import { store, persistor } from "./redux/store.js"; // Переконайтеся, що шлях правильний  
-import Loading from "./components/Loading"; // Додайте компонент завантаження  
+import { store, persistor } from "./redux/store.js";  
 
 ReactDOM.createRoot(document.getElementById("root")).render(  
   <React.StrictMode>  

@@ -1,23 +1,26 @@
-import React from 'react';  
-import { useSelector } from 'react-redux';  
-import Contact from './Contact'; // Убедитесь, что путь к Contact соответствует вашей структуре  
-import styles from './ContactList.module.css';  
+import s from "./List.module.css";
+import Contact from "../Contact/Contact";
+import { useSelector } from "react-redux";
+import { selectContact } from "../../redux/contactsSlice";
+import { selectFilter } from "../../redux/filtersSlice";
 
-const ContactList = () => {  
-    const contacts = useSelector(state => state.contacts.items);  
-    const filter = useSelector(state => state.filters.name);  
+const ContactList = () => {
+  const contacts = useSelector(selectContact);
+  const filter = useSelector(selectFilter);
+  const filteredData = contacts.filter((contact) =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
+  console.log(filteredData);
 
-    const filteredContacts = contacts.filter(contact =>  
-        contact.name.toLowerCase().includes(filter.toLowerCase())  
-    );  
-
-    return (  
-        <ul className={styles.list}>  
-            {filteredContacts.map(contact => (  
-                <Contact key={contact.id} {...contact} />  
-            ))}  
-        </ul>  
-    );  
-};  
+  return (
+    <div className={s.container}>
+      <ul className={s.list}>
+        {filteredData.map((item) => (
+          <Contact {...item} key={item.id} />
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default ContactList;
